@@ -7,3 +7,4 @@
   - CSS
 </h3>
 <img src="Captura de tela PC.png">
+<h3>Assim ficou o resultado em celular:</h3>
