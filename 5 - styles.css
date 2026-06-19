@@ -1,0 +1,167 @@
+/*PROJETO*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    color: #5D5D7D;
+}
+
+.wrapper {
+    height: 100vh;
+    width: 100vw;
+    margin-bottom: 10%;
+}
+
+.conteiner-left {
+    display: inline-block;
+    width: 60%;
+    padding-left: 136px;
+    margin-top: 27%;
+}
+
+.conteiner-right {
+    display: inline-block;
+    background-color: rgba(93, 93, 125, 0.16);
+    height: 100vh;
+    width: 40%;
+    position: absolute;
+}
+
+/*a cor no site estava em hex (#) mas precisava haver opacidade (transparência), para iso usamos
+o rgba (red, green, blue e a = opacidade) então precisava converter e para isso pesquisamos um 
+ site para converter cores (https://www.peko-step.com/pt/tool/tfcolor.html) */
+
+img{
+    right: 132px;
+    position: relative;
+    top: 25%;
+}
+
+h1{
+    font-size: 70px;
+    line-height: 80px;
+    width: 368px;
+}
+
+p{
+    font-size: 28px;
+    line-height: 48px;
+    opacity: 0.6;
+    margin: 15px 0; /*nesse atalho o 1° valor é em cima e embaixo e o 2° dos lados */
+    width: 540px;
+}
+
+button{
+    width: 269px;
+    height: 62px;
+    background: #9499ea;
+    box-shadow: 0px 10px 24px rgba(148, 153, 234, 0.0979959);
+    font-family: Oswald;
+    border: 0;
+    border-radius: 30px;
+    font-size: 24px;;
+    line-height: 100%;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover{
+    opacity: 0.8;
+}
+
+button:active{
+    opacity: 0.5;
+}
+
+a{
+    font-size: 28px;
+    line-height: 100%;
+    color: #5D5D7D;
+    margin-right: 41px;
+    cursor: pointer;
+}
+
+a:nth-child(2) {
+    opacity: 0.4;
+}
+
+a:hover {
+    opacity: 0.4;
+}
+
+a:active {
+    opacity: 0.8;
+}
+
+header{
+    margin: 24px 0 0 57px;
+}
+
+/*o tamanho do h1 e paragrafo e demais são 400, então podemos colocar esse valor 
+lá no * que já serve para todos ao invés de um por um*/
+/*a cor pode ser feito dessa forma e onde ela for diferente inserimos outra (ex button)*/
+
+/*abaixo entra as configurações para adaptar para celular / Responsividade*/
+
+@media screen and (max-width: 900px) {
+    .conteiner-left {
+        width: 100%;
+        height: 50%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .conteiner-right {
+        display: block;
+        height: auto;
+        width: 100%;
+        position: static;
+        padding: 40px;
+    }
+
+    img {
+        position: static;
+        max-width: 90%;
+    }
+
+    header {
+        display: none;
+    }
+
+    h1 { 
+        font-size: 36px;
+        line-height: 52px;
+        width: auto;
+        margin: 58px 50px 0 50px;
+        text-align: center;
+    }
+
+    p{
+        margin: 15px 40px; 
+        width: auto;
+        text-align: center;
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    button{
+        margin: 0 auto;
+        display: block;
+
+    }
+}
+
+/*para alinha h1 e p (textos) usamos text-align center - mas o botão não é texto então 
+usamos margin auto dos lados - mas para funcionar o elemento tem que ser display block*/
+
+/*abaixo incluimos comfigurações para celulares muito pequenos*/
+
+@media screen and (max-width: 323px) {
+    .conteiner-left {
+        height: 60%;
+    }
+}
